@@ -1,0 +1,8 @@
+# Folders
+build/
+.cache/
+
+# Files
+*.exe
+*.pdb
+gameOfLife
