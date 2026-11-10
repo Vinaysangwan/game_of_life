@@ -131,22 +131,25 @@ int main()
 
     for (int i=0; i<GRID_COUNT_Y; ++i)
     {
-      DrawLine(0, i * GRID_SIZE, WINDOW_WIDTH, i * GRID_SIZE, GRID_COLOR);
-    }
-
-    for (int i=0; i<GRID_COUNT_X; ++i)
-    {
-      DrawLine(i * GRID_SIZE, 0, i * GRID_SIZE, WINDOW_HEIGHT, GRID_COLOR);
-    }
-
-    for (int i=0; i<GRID_COUNT_Y; ++i)
-    {
       for (int j=0; j<GRID_COUNT_X; ++j)
       {
         if (cells[i][j])  
         {
           DrawRectangle(j * GRID_SIZE, i * GRID_SIZE, GRID_SIZE, GRID_SIZE, WHITE);
         }
+      }
+    }
+
+    // Draw Grid Lines
+    {
+      for (int i=0; i<GRID_COUNT_Y; ++i)
+      {
+        DrawLine(0, i * GRID_SIZE, WINDOW_WIDTH, i * GRID_SIZE, GRID_COLOR);
+      }
+
+      for (int i=0; i<GRID_COUNT_X; ++i)
+      {
+        DrawLine(i * GRID_SIZE, 0, i * GRID_SIZE, WINDOW_HEIGHT, GRID_COLOR);
       }
     }
 
